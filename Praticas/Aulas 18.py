@@ -52,3 +52,11 @@ elif option == "3":
     print(matrix3)
 else:
     print("Wrong input.")
+
+#exercicio 3
+for i in range(1, 11):  # Iterate through numbers from 1 to 10
+    print(f"Multiplication table for {i}:")
+    for j in range(1, 11):  # Iterate through multiples from 1 to 10
+        result = i * j
+        print(f"{i} x {j} = {result}")
+    print()  # Print an empty line to separate tables

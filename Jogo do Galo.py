@@ -50,14 +50,18 @@ while True:
     print(np.array(gameboard))
     count += 1
     if count % 2 != 0:
-        play = input(f"Input your play Player 1:(ex:A1):")
+        play = input(f"Input your play Player X:(ex:A1):")
         while play not in gameboard[0] and play not in gameboard[1] and play not in gameboard[2]:
             play = input(f"Input your play Player 1:(ex:A1):")
         replacegameboard(gameboard,play, "X")
     else:
-        play = input(f"Input your play Player 2:(ex:A1):")
+        play = input(f"Input your play Player O:(ex:A1):")
         while play not in gameboard[0] and play not in gameboard[1] and play not in gameboard[2]:
             play = input(f"Input your play Player 2:(ex:A1):")
         replacegameboard(gameboard, play, "O")
     win(gameboard)
+    if count > 8:
+        print(gameboard)
+        print("DRAW!!")
+        sys.exit()
 
